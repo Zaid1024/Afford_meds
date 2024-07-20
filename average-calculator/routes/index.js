@@ -9,21 +9,6 @@ const NUMBERS_API_ENDPOINT = 'http://api.20.244.56.144/numbers'; // Replace with
 let numberWindow = [];
 let uniqueNumberSet = new Set();
 
-const userCredentials = {
-  companyName: "Zmart",
-  clientID: "f0192bf6-4d86-4c9c-b5f1-9714d21a08b9",
-  clientSecret: "WsSBeEntevBaaMHm",
-  ownerName: "ZaidH",
-  ownerEmail: "zaidhussain088@gmail.com",
-  rollNo: "02JST22UCS411"
-};
-
-const authToken = {
-  token_type: "Bearer",
-  access_token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYXBDbGFpbXMiOnsiZXhwIjoxNzIxNDU0OTkzLCJpYXQiOjE3MjE0NTQ2OTMsImlzcyI6IkFmZm9yZG1lZCIsImp0aSI6ImYwMTkyYmY2LTRkODYtNGM5Yy1iNWYxLTk3MTRkMjFhMDhiOSIsInN1YiI6InphaWRodXNzYWluMDg4QGdtYWlsLmNvbSJ9LCJjb21wYW55TmFtZSI6IlptYXJ0IiwiY2xpZW50SUQiOiJmMDE5MmJmNi00ZDg2LTRjOWMtYjVmMS05NzE0ZDIxYTA4YjkiLCJjbGllbnRTZWNyZXQiOiJXc1NCZUVudGV2QmFhTUhtIiwib3duZXJOYW1lIjoiWmFpZEgiLCJvd25lckVtYWlsIjoiemFpZGh1c3NhaW4wODhAZ21haWwuY29tIiwicm9sbE5vIjoiMDJKU1QyMlVDUzQxMSJ9.9kwmAxXdjpFdVYV3D5wEgDMgOANPO_SyW4WNNU9AOOI",
-  expires_in: 1721454993
-};
-
 app.get('/numbers/:numberid', async (req, res) => {
   const { numberid } = req.params;
   if (!['p', 'f', 'e', 'r'].includes(numberid)) {
